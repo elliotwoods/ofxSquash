@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{f85bf773-01b5-4113-b2a8-9c50f8cd4f6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{dcb4cf43-9082-4c03-be15-5fb8b3303bc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\squash">
+      <UniqueIdentifier>{2d66382f-583b-4b43-aedc-2ce55e38ea82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\squash\include">
+      <UniqueIdentifier>{5d07689e-66e1-44b0-a7b1-f1ae55fad584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\squash\include\squash">
+      <UniqueIdentifier>{4f7b9185-d361-4b2e-b20f-8a53f54fa631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ofxSquash">
+      <UniqueIdentifier>{f9124cd0-6d88-4a27-a43b-826b951ba435}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ofxSquash.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\codec.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\context.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\file.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\license.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\memory.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\object.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\options.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\plugin.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\splice.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\squash.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\status.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\stream.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\types.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\squash\include\squash\version.h">
+      <Filter>libs\squash\include\squash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxSquash\Codec.h">
+      <Filter>src\ofxSquash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxSquash\Constants.h">
+      <Filter>src\ofxSquash</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ofxSquash.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxSquash\Codec.cpp">
+      <Filter>src\ofxSquash</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
