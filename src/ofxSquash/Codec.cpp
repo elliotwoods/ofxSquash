@@ -62,17 +62,18 @@ namespace ofxSquash {
 		const auto compressedData = (uint8_t*) & compressed[0];
 		auto size = squash_codec_get_uncompressed_size(this->squashCodec, compressed.size(), compressedData);
 		if (size == 0) {
-			OFXSQUASH_WARNING << "Codec [" << this->getName() << "] doesn't support getUncompressedSize (sorry! you'll need to just allocate 'enough' yourself)";
+			OFXSQUASH_WARNING << "Codec [" << this->getName() << "] doesn't support getUncompressedSize (sorry! you'll need to allocate 'enough' yourself)";
 		}
 	}
 
 	//----------
-	size_t Codec::compress(uint8_t * compressed, size_t compressedSize, uint8_t * uncompressed, uint8_t uncompressedSize) const {
+	size_t Codec::compress(uint8_t * compressed, size_t compressedSize, uint8_t * uncompressed, size_t uncompressedSize) const {
 		IF_NOT_OK_RETURN(0);
 
 		auto newCompressedSize = compressedSize;
-		if (SQUASH_OK != squash_codec_compress(this->squashCodec, &newCompressedSize, compressed, uncompressedSize, uncompressed, NULL)) {
-			OFXSQUASH_WARNING << "Compression failed";
+		auto status = squash_codec_compress(this->squashCodec, &newCompressedSize, compressed, uncompressedSize, uncompressed, NULL);
+		if (status != SQUASH_OK) {
+			OFXSQUASH_WARNING << "[" << this->getName() << "] Compression failed : " << squash_status_to_string(status);
 		}
 		return newCompressedSize;
 	}
@@ -86,13 +87,7 @@ namespace ofxSquash {
 		const auto uncompressedData = (uint8_t*) (&uncompressed[0]);
 		const size_t uncompressedSize = static_cast<size_t>(uncompressed.size());
 		
-		auto status = squash_codec_compress(this->squashCodec, &compressedSize, compressedData, uncompressedSize, uncompressedData, NULL);
-		if(status != SQUASH_OK) {
-			OFXSQUASH_WARNING << "Compression failed : " << squash_status_to_string(status);
-		}
-		else {
-			compressed.resize(compressedSize);
-		}
+		compressed.resize(this->compress(compressedData, compressedSize, uncompressedData, uncompressedSize));
 	}
 
 	//----------
@@ -106,7 +101,19 @@ namespace ofxSquash {
 	}
 
 	//----------
-	void Codec::uncompress(string & uncompressed, const string & compressed) const {
+	size_t Codec::decompress(uint8_t * uncompressed, size_t uncompressedSize, uint8_t * compressed, size_t compressedSize) const {
+		IF_NOT_OK_RETURN(0);
+
+		auto newUncompressedSize = uncompressedSize;
+		auto status = squash_codec_decompress(this->squashCodec, &newUncompressedSize, uncompressed, compressedSize, compressed, NULL);
+		if (status != SQUASH_OK) {
+			OFXSQUASH_WARNING << "[" << this->getName() << "] Decompression failed : " << squash_status_to_string(status);
+		}
+		return newUncompressedSize;
+	}
+
+	//----------
+	void Codec::decompress(string & uncompressed, const string & compressed) const {
 		IF_NOT_OK_RETURN();
 
 		const auto uncompressedData = (uint8_t*)(&uncompressed[0]);
@@ -114,27 +121,21 @@ namespace ofxSquash {
 		const auto compressedData = (uint8_t*)(&compressed[0]);
 		const size_t compressedSize = static_cast<size_t>(compressed.size());
 
-		auto status = squash_codec_decompress(this->squashCodec, &uncompressedSize, uncompressedData, compressedSize, compressedData, NULL);
-		if (status != SQUASH_OK) {
-			OFXSQUASH_WARNING << "Decompression failed : " << squash_status_to_string(status);
-		}
-		else {
-			uncompressed.resize(uncompressedSize);
-		}		
+		uncompressed.resize(this->decompress(uncompressedData, uncompressedSize, compressedData, compressedSize));
 	}
 
 	//----------
-	string Codec::uncompress(const string & compressed) const {
+	string Codec::decompress(const string & compressed) const {
 		IF_NOT_OK_RETURN(string());
 
 		const auto uncomprsesedSize = this->getUncompressedSize(compressed);
 		if (uncomprsesedSize == 0) {
-			OFXSQUASH_WARNING << "uncompress(const string & compressed) with this codec. Please use uncompress(string & uncompressed, const string & compressed) and pre-allocate first.";
+			OFXSQUASH_WARNING << "decompress(const string & compressed) with this codec. Please use decompress(string & uncompressed, const string & compressed) and pre-allocate first.";
 		}
 
 		string uncompressed;
 		uncompressed.resize(uncomprsesedSize);
-		this->uncompress(uncompressed, compressed);
+		this->decompress(uncompressed, compressed);
 
 		return uncompressed;
 	}

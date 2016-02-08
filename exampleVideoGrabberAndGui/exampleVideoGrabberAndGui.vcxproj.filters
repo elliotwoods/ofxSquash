@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ofxProfiler\src\ofxProfiler.cpp">
+      <Filter>addons\ofxProfiler\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ofxProfiler\src\ofxProfiler\Activity.cpp">
+      <Filter>addons\ofxProfiler\src\ofxProfiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ofxProfiler\src\ofxProfiler\Scope.cpp">
+      <Filter>addons\ofxProfiler\src\ofxProfiler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{3de16737-fbc8-49dd-b0ab-004450e1ca07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxProfiler">
+      <UniqueIdentifier>{556a5c67-ac57-40bf-9e44-79e2589cf346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxProfiler\src">
+      <UniqueIdentifier>{0d3a64b0-a7dd-431d-95c9-a06e7fd53404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxProfiler\src\ofxProfiler">
+      <UniqueIdentifier>{404c5770-50c7-48db-9abb-8deb3fa40a65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ofxProfiler\src\ofxProfiler.h">
+      <Filter>addons\ofxProfiler\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ofxProfiler\src\ofxProfiler\Activity.h">
+      <Filter>addons\ofxProfiler\src\ofxProfiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ofxProfiler\src\ofxProfiler\Scope.h">
+      <Filter>addons\ofxProfiler\src\ofxProfiler</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>

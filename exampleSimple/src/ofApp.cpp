@@ -20,11 +20,7 @@ void ofApp::update(){
 
 	string compressedText = this->codec.compress(text);
 	
-	string uncompressed;
-	uncompressed.resize(1000);
-	this->codec.uncompress(uncompressed, compressedText);
-	uncompressed.size();
-	string uncompressedText = this->codec.uncompress(compressedText);
+	string uncompressedText = this->codec.decompress(compressedText);
 
 	cout << "Original" << endl;
 	cout << "========" << endl; 
