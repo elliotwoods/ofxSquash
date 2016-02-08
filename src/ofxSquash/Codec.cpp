@@ -51,6 +51,22 @@ namespace ofxSquash {
 	}
 
 	//----------
+	size_t Codec::getUncompressedSize(uint8_t * compressed, size_t compressedSize) const {
+		IF_NOT_OK_RETURN(0);
+		return squash_codec_get_uncompressed_size(this->squashCodec, compressedSize, compressed);
+	}
+
+	//----------
+	size_t Codec::getUncompressedSize(const string & compressed) const {
+		IF_NOT_OK_RETURN(0);
+		const auto compressedData = (uint8_t*) & compressed[0];
+		auto size = squash_codec_get_uncompressed_size(this->squashCodec, compressed.size(), compressedData);
+		if (size == 0) {
+			OFXSQUASH_WARNING << "Codec [" << this->getName() << "] doesn't support getUncompressedSize (sorry! you'll need to just allocate 'enough' yourself)";
+		}
+	}
+
+	//----------
 	size_t Codec::compress(uint8_t * compressed, size_t compressedSize, uint8_t * uncompressed, uint8_t uncompressedSize) const {
 		IF_NOT_OK_RETURN(0);
 
@@ -69,11 +85,14 @@ namespace ofxSquash {
 		size_t compressedSize = static_cast<size_t>(compressed.size());
 		const auto uncompressedData = (uint8_t*) (&uncompressed[0]);
 		const size_t uncompressedSize = static_cast<size_t>(uncompressed.size());
-
-		if(SQUASH_OK != squash_codec_compress(this->squashCodec, &compressedSize, compressedData, uncompressedSize, uncompressedData, NULL)) {
-			OFXSQUASH_WARNING << "Compression failed";
+		
+		auto status = squash_codec_compress(this->squashCodec, &compressedSize, compressedData, uncompressedSize, uncompressedData, NULL);
+		if(status != SQUASH_OK) {
+			OFXSQUASH_WARNING << "Compression failed : " << squash_status_to_string(status);
 		}
-		compressed.resize(compressedSize);
+		else {
+			compressed.resize(compressedSize);
+		}
 	}
 
 	//----------
@@ -84,5 +103,39 @@ namespace ofxSquash {
 		compressed.resize(this->getMaxCompressedSize(uncompressed.size()));
 		this->compress(compressed, uncompressed);
 		return compressed;
+	}
+
+	//----------
+	void Codec::uncompress(string & uncompressed, const string & compressed) const {
+		IF_NOT_OK_RETURN();
+
+		const auto uncompressedData = (uint8_t*)(&uncompressed[0]);
+		size_t uncompressedSize = static_cast<size_t>(uncompressed.size());
+		const auto compressedData = (uint8_t*)(&compressed[0]);
+		const size_t compressedSize = static_cast<size_t>(compressed.size());
+
+		auto status = squash_codec_decompress(this->squashCodec, &uncompressedSize, uncompressedData, compressedSize, compressedData, NULL);
+		if (status != SQUASH_OK) {
+			OFXSQUASH_WARNING << "Decompression failed : " << squash_status_to_string(status);
+		}
+		else {
+			uncompressed.resize(uncompressedSize);
+		}		
+	}
+
+	//----------
+	string Codec::uncompress(const string & compressed) const {
+		IF_NOT_OK_RETURN(string());
+
+		const auto uncomprsesedSize = this->getUncompressedSize(compressed);
+		if (uncomprsesedSize == 0) {
+			OFXSQUASH_WARNING << "uncompress(const string & compressed) with this codec. Please use uncompress(string & uncompressed, const string & compressed) and pre-allocate first.";
+		}
+
+		string uncompressed;
+		uncompressed.resize(uncomprsesedSize);
+		this->uncompress(uncompressed, compressed);
+
+		return uncompressed;
 	}
 }

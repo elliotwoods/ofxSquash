@@ -4,7 +4,7 @@
 void ofApp::setup(){
 	ofSetBackgroundColor(0);
 
-	this->codec = ofxSquash::getCodecList()["lz4"];
+	this->codec = ofxSquash::getCodecList()["snappy"];
 }
 
 //--------------------------------------------------------------
@@ -17,11 +17,30 @@ void ofApp::update(){
 		I'm going to be squashed! \n\
 		I'm going to be squashed! \n\
 		";
-	string compressedText = this->codec.compress(text);
 
+	string compressedText = this->codec.compress(text);
+	
+	string uncompressed;
+	uncompressed.resize(1000);
+	this->codec.uncompress(uncompressed, compressedText);
+	uncompressed.size();
+	string uncompressedText = this->codec.uncompress(compressedText);
+
+	cout << "Original" << endl;
+	cout << "========" << endl; 
 	cout << text << endl;
+
+	cout << "Compressed" << endl;
+	cout << "========" << endl;
 	cout << compressedText << endl;
+
+	cout << "Uncompressed" << endl;
+	cout << "============" << endl;
+	cout << uncompressedText << endl;
+
+	cout << endl;
 	cout << text.size() << "bytes->" << compressedText.size() << "bytes" << endl;
+	cout << endl;
 	cout << endl;
 }
 
