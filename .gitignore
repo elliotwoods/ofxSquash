@@ -6,11 +6,20 @@
 *.DS_*
 ._*.*
 
+# Ignore bin folder
+**/bin/*
+
+# Keep useful libs
+!libs/**/Debug
+!libs/**/Release
+!libs/**/bin/*
+
+Debug/
+Release/
+
 .svn/
 obj/
-bin/
 build/
-!data/
 xcuserdata/
 
 ipch/
@@ -18,16 +27,14 @@ ipch/
 *.opensdf
 *.vcxproj.user
 
+# Visual Studio temp files
 *.obj
 *.tlog
 *.sdf
 *.pdb
 *.idb
 *.pch
-Debug/
-Release/
 
 
+# VVVV backup files
 *~.xml
-
-Sketch*/
