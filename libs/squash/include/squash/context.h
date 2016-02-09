@@ -35,6 +35,8 @@
 
 SQUASH_BEGIN_DECLS
 
+SQUASH_API void			  squash_set_plugin_directory             (const char * directory);
+
 SQUASH_API SquashContext* squash_context_get_default              (void);
 SQUASH_NONNULL(1, 2)
 SQUASH_API SquashPlugin*  squash_context_get_plugin               (SquashContext* context, const char* plugin);
