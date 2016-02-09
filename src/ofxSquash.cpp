@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include <squash/squash.h>
 
+//----------
 void populateCodecListCallback(SquashCodec * squashCodec, void * data) {
 	auto codecList = static_cast<ofxSquash::CodecList *>(data);
 	auto inserter = make_pair(string(), ofxSquash::Codec(squashCodec));
@@ -11,6 +12,16 @@ void populateCodecListCallback(SquashCodec * squashCodec, void * data) {
 }
 
 namespace ofxSquash {
+	//----------
+	SquashInitializer::SquashInitializer() {
+		auto pluginDir = ofToDataPath("../plugins/squash", true);
+		ofStringReplace(pluginDir, "\\", "/");
+		squash_set_plugin_directory(pluginDir.c_str());
+	}
+
+	//----------
+	SquashInitializer squashInitializer;
+
 	//----------
 	map<string, Codec> getCodecList(bool returnOnlyValid) {
 		CodecList codecs;

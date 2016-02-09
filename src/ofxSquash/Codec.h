@@ -44,6 +44,6 @@ namespace ofxSquash {
 	protected:
 		string name;
 		SquashCodec * squashCodec;
-		bool valid;
+		bool valid = false;
 	};
 }

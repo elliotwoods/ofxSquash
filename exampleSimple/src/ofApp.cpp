@@ -4,7 +4,9 @@
 void ofApp::setup(){
 	ofSetBackgroundColor(0);
 
-	this->codec = ofxSquash::getCodecList()["snappy"];
+	auto codecs = ofxSquash::getCodecList();
+	cout << "Squash found " << codecs.size() << " codecs." << endl;
+	this->codec = codecs["snappy"];
 }
 
 //--------------------------------------------------------------

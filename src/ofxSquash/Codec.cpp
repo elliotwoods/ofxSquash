@@ -9,6 +9,7 @@ namespace ofxSquash {
 	OFXSQUASH_ERROR << "Cannot call function. Codec [" << this->getName() << "] is not initialised"; \
 	return X; \
 }
+
 	//----------
 	Codec::Codec() {
 		this->name = "uninitialized";

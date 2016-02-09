@@ -116,7 +116,7 @@
       <AdditionalLibraryDirectories>..\..\..\addons\ofxSquash\libs\squash\lib\vs\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/" "$(SolutionDir)bin/" "*.dll" "*.ini" /njs /njh /np /fp /bytes /s
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -136,7 +136,7 @@ if errorlevel 1 exit 0 else exit %errorlevel%</Command>
       <AdditionalLibraryDirectories>..\..\..\addons\ofxSquash\libs\squash\lib\vs\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/" "$(SolutionDir)bin/" "*.dll" "*.ini" /njs /njh /np /fp /bytes /s
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -160,7 +160,7 @@ if errorlevel 1 exit 0 else exit %errorlevel%</Command>
       <AdditionalLibraryDirectories>..\..\..\addons\ofxSquash\libs\squash\lib\vs\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/$(Configuration)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/" "$(SolutionDir)bin/" "*.dll" "*.ini" /njs /njh /np /fp /bytes /s
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -184,7 +184,7 @@ if errorlevel 1 exit 0 else exit %errorlevel%</Command>
       <AdditionalLibraryDirectories>..\..\..\addons\ofxSquash\libs\squash\lib\vs\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/$(Configuration)/" "$(SolutionDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+      <Command>robocopy "$(ProjectDir)../../../addons/ofxSquash/libs/squash/bin/vs/$(Platform)/" "$(SolutionDir)bin/" "*.dll" "*.ini" /njs /njh /np /fp /bytes /s
 if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
