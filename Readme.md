@@ -1,9 +1,9 @@
 ofxSquash
 =========
 
-![exampleVideoGrabberAndGui](https://raw.githubusercontent.com/elliotwoods/ofxSquash/master/exampleVideoGrabberAndGui/screenshot.png)
+Squash is a library of compression algorithms with clean abstraction so that you can access a wide range of compression algorithms with a single API. This addon is an implementation of Squash (https://quixdb.github.io/squash/) for use with openFrameworks.
 
-An implementation of Squash (https://quixdb.github.io/squash/) for openFrameworks.
+![exampleVideoGrabberAndGui](https://raw.githubusercontent.com/elliotwoods/ofxSquash/master/exampleVideoGrabberAndGui/screenshot.png)
 
 Compatability
 =============
