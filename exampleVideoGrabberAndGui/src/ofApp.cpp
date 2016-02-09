@@ -15,11 +15,12 @@ void ofApp::setup(){
 	auto horizontalStrip = ofxCvGui::makeStrip();
 
 	auto videoPanel = ofxCvGui::makePanel(this->video, "Camera");
-	auto compressedPanel = ofxCvGui::makePanel(this->compressed, "Compressed (NB : view is zoomed out by 2x in y)");
+	auto compressedPanel = ofxCvGui::makePanel(this->compressed, "Compressed");
 	auto graphPanel = ofxCvGui::makeBlank("Results");
 
 	horizontalStrip->add(videoPanel);
 	horizontalStrip->add(compressedPanel);
+	horizontalStrip->setCellSizes({666, 333});
 
 	verticalStrip->add(horizontalStrip);
 	verticalStrip->add(graphPanel);
@@ -169,17 +170,23 @@ void ofApp::setup(){
 				ofDrawBitmapString(test->codec.getName(), 3, -3);
 
 				ofCircle(0, 0, 3.0f);
-
-				if (test == this->selectedTest.lock()) {
-					ofPushStyle();
-					ofSetLineWidth(2.0f);
-					ofNoFill();
-					ofSetColor(255, 100, 100);
-					ofCircle(0, 0, 8.0f);
-					ofPopStyle();
-				}
 			}
 			ofPopMatrix();
+		}
+
+		//draw selected datapoint (on top
+		if (!this->selectedTest.expired()) {
+			auto selectedTest = this->selectedTest.lock();
+			ofPushStyle();
+			ofPushMatrix();
+			{
+				ofTranslate(selectedTest->graphPosition);
+				ofDrawBitmapStringHighlight(selectedTest->codec.getName(), 5, -5, ofColor(255, 100, 100));
+				ofSetColor(255, 100, 100);
+				ofCircle(0, 0, 8.0f);
+			}
+			ofPopMatrix();
+			ofPopStyle();
 		}
 	};
 
@@ -220,7 +227,37 @@ void ofApp::setup(){
 			status << "Compression speed [MB/s] : " << selectedTest->compressionSpeed << endl;
 
 			ofSetDrawBitmapMode(ofDrawBitmapMode::OF_BITMAPMODE_SIMPLE);
-			ofDrawBitmapStringHighlight(status.str(), ofVec2f(50, 100), ofColor(100, 100, 100, 200));
+			ofDrawBitmapStringHighlight(status.str(), ofVec2f(50, args.localBounds.height - 150), ofColor(100));
+		}
+	};
+	compressedPanel->onDrawCropped += [this](ofxCvGui::Panels::Draws::DrawCroppedArguments & args) {
+		ofPushStyle();
+		ofSetDrawBitmapMode(ofDrawBitmapMode::OF_BITMAPMODE_MODEL_BILLBOARD);
+		for (float percent = 0; percent <= 200; percent += 20) {
+			ofPushMatrix();
+			{
+				ofTranslate(0, percent / 200.0f * args.drawSize.y);
+				ofLine(0, 0, 5, 0);
+				ofDrawBitmapStringHighlight(ofToString(percent) + "%", ofPoint(10, 5));
+			}
+			ofPopMatrix();
+		}
+		ofPopStyle();
+
+		if (!this->selectedTest.expired()) {
+			auto selectedTest = this->selectedTest.lock();
+			float sizeLineY = selectedTest->compressionRatio * args.drawSize.y / 2.0f;
+
+			ofPushStyle();
+			{
+				ofSetLineWidth(5.0f);
+				ofSetColor(0);
+				ofLine(0, sizeLineY, args.drawSize.x, sizeLineY);
+				ofSetLineWidth(2.0f);
+				ofSetColor(255);
+				ofLine(0, sizeLineY, args.drawSize.x, sizeLineY);
+			}
+			ofPopStyle();
 		}
 	};
 	//
