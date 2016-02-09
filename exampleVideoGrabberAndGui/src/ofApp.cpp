@@ -191,17 +191,19 @@ void ofApp::setup(){
 	};
 
 	graphPanel->onMouse += [this](ofxCvGui::MouseArguments & args) {
-		float distance = std::numeric_limits<float>::max();
-		shared_ptr<Test> newSelection = nullptr;
-		for (auto test : this->tests) {
-			auto distanceToTest = (test->graphPosition - args.local).lengthSquared();
-			if (distanceToTest < distance) {
-				distance = distanceToTest;
-				newSelection = test;
+		if (args.isLocal()) {
+			float distance = std::numeric_limits<float>::max();
+			shared_ptr<Test> newSelection = nullptr;
+			for (auto test : this->tests) {
+				auto distanceToTest = (test->graphPosition - args.local).lengthSquared();
+				if (distanceToTest < distance) {
+					distance = distanceToTest;
+					newSelection = test;
+				}
 			}
-		}
-		if (newSelection) {
-			this->selectedTest = newSelection;
+			if (newSelection) {
+				this->selectedTest = newSelection;
+			}
 		}
 	};
 	//
