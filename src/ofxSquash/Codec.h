@@ -41,6 +41,8 @@ namespace ofxSquash {
 			auto uncompressedSize = uncompressed.size();
 			return this->compress((uint8_t*)compressed.getData(), compressedSize, (uint8_t*)uncompressed.getData(), uncompressedSize);
 		}
+
+		SquashCodec * getSquashCodec() const;
 	protected:
 		string name;
 		SquashCodec * squashCodec;

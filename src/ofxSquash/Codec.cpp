@@ -140,4 +140,9 @@ namespace ofxSquash {
 
 		return uncompressed;
 	}
+
+	//----------
+	SquashCodec * Codec::getSquashCodec() const {
+		return this->squashCodec;
+	}
 }
