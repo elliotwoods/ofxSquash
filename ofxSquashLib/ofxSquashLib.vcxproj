@@ -36,10 +36,12 @@
     <ClInclude Include="..\src\ofxSquash.h" />
     <ClInclude Include="..\src\ofxSquash\Codec.h" />
     <ClInclude Include="..\src\ofxSquash\Constants.h" />
+    <ClInclude Include="..\src\ofxSquash\Stream.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ofxSquash.cpp" />
     <ClCompile Include="..\src\ofxSquash\Codec.cpp" />
+    <ClCompile Include="..\src\ofxSquash\Stream.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FAA73572-FD12-41FA-8FBE-CB47482D2D87}</ProjectGuid>

@@ -31,7 +31,7 @@ namespace ofxSquash {
 			this->valid = true;
 		}
 		else {
-			OFXSQUASH_WARNING << "Codec [" << this->name << "] cannot be initialised";
+			OFXSQUASH_WARNING << "Codec [" << this->name << "] cannot be initialized";
 			this->valid = false;
 		}
 	}
@@ -52,9 +52,9 @@ namespace ofxSquash {
 	}
 
 	//----------
-	size_t Codec::getUncompressedSize(uint8_t * compressed, size_t compressedSize) const {
+	size_t Codec::getUncompressedSize(void * compressed, size_t compressedSize) const {
 		IF_NOT_OK_RETURN(0);
-		return squash_codec_get_uncompressed_size(this->squashCodec, compressedSize, compressed);
+		return squash_codec_get_uncompressed_size(this->squashCodec, compressedSize, (uint8_t*) compressed);
 	}
 
 	//----------
@@ -68,11 +68,11 @@ namespace ofxSquash {
 	}
 
 	//----------
-	size_t Codec::compress(uint8_t * compressed, size_t compressedSize, uint8_t * uncompressed, size_t uncompressedSize) const {
+	size_t Codec::compress(void * compressed, size_t compressedSize, const void * uncompressed, size_t uncompressedSize) const {
 		IF_NOT_OK_RETURN(0);
 
 		auto newCompressedSize = compressedSize;
-		auto status = squash_codec_compress(this->squashCodec, &newCompressedSize, compressed, uncompressedSize, uncompressed, NULL);
+		auto status = squash_codec_compress(this->squashCodec, &newCompressedSize, (uint8_t*) compressed, uncompressedSize, (uint8_t*) uncompressed, NULL);
 		if (status != SQUASH_OK) {
 			OFXSQUASH_WARNING << "[" << this->getName() << "] Compression failed : " << squash_status_to_string(status);
 		}
@@ -83,12 +83,7 @@ namespace ofxSquash {
 	void Codec::compress(string & compressed, const string & uncompressed) const {
 		IF_NOT_OK_RETURN();
 
-		const auto compressedData = (uint8_t*) (&compressed[0]);
-		size_t compressedSize = static_cast<size_t>(compressed.size());
-		const auto uncompressedData = (uint8_t*) (&uncompressed[0]);
-		const size_t uncompressedSize = static_cast<size_t>(uncompressed.size());
-		
-		compressed.resize(this->compress(compressedData, compressedSize, uncompressedData, uncompressedSize));
+		compressed.resize(this->compress(& compressed[0], compressed.size(), uncompressed.data(), uncompressed.size()));
 	}
 
 	//----------
@@ -102,11 +97,11 @@ namespace ofxSquash {
 	}
 
 	//----------
-	size_t Codec::decompress(uint8_t * uncompressed, size_t uncompressedSize, uint8_t * compressed, size_t compressedSize) const {
+	size_t Codec::decompress(void * uncompressed, size_t uncompressedSize, const void * compressed, size_t compressedSize) const {
 		IF_NOT_OK_RETURN(0);
 
 		auto newUncompressedSize = uncompressedSize;
-		auto status = squash_codec_decompress(this->squashCodec, &newUncompressedSize, uncompressed, compressedSize, compressed, NULL);
+		auto status = squash_codec_decompress(this->squashCodec, &newUncompressedSize, (uint8_t*) uncompressed, compressedSize, (uint8_t*) compressed, NULL);
 		if (status != SQUASH_OK) {
 			OFXSQUASH_WARNING << "[" << this->getName() << "] Decompression failed : " << squash_status_to_string(status);
 		}

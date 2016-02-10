@@ -72,12 +72,18 @@
     <ClInclude Include="..\src\ofxSquash\Constants.h">
       <Filter>src\ofxSquash</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\ofxSquash\Stream.h">
+      <Filter>src\ofxSquash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ofxSquash.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxSquash\Codec.cpp">
+      <Filter>src\ofxSquash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxSquash\Stream.cpp">
       <Filter>src\ofxSquash</Filter>
     </ClCompile>
   </ItemGroup>

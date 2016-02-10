@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofxSquash/Codec.h"
+#include "ofxSquash/Stream.h"
 
 #include <vector>
 
