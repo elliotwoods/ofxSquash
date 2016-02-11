@@ -6,8 +6,7 @@ namespace ofxSquash {
 	//----------
 	Stream::Stream(Codec codec, Direction direction, WriteFunction writeFunction, size_t bufferSize)
 		: writeFunction(writeFunction)
-		, bufferSize(bufferSize)
-		, buffer(codec.getMaxCompressedSize(bufferSize))
+		, buffer(bufferSize)
 		, direction(direction)
 	{
 		if (!codec.isValid()) {
@@ -52,26 +51,21 @@ namespace ofxSquash {
 
 		SquashStatus status;
 
-		while (incomingBytesRemaining > 0)
-		{
-			size_t input_size = std::min<size_t>(this->bufferSize, incomingBytesRemaining);
+		this->squashStream->next_in = data;
+		this->squashStream->avail_in = size;
 
-			this->squashStream->next_in = data;
-			this->squashStream->avail_in = input_size;
+		do
+		{
 			this->squashStream->next_out = this->buffer.data();
 			this->squashStream->avail_out = this->buffer.size();
 
-			do
+			status = squash_stream_process(this->squashStream);
+
+			if (status != SQUASH_OK && status != SQUASH_PROCESSING)
 			{
-				status = squash_stream_process(this->squashStream);
-
-				if (status != SQUASH_OK && status != SQUASH_PROCESSING)
-				{
-					OFXSQUASH_ERROR << "Processing stream failed: " << squash_status_to_string(status);
-					return;
-				}
-
-			} while (status == SQUASH_PROCESSING);
+				OFXSQUASH_ERROR << "Processing stream failed: " << squash_status_to_string(status);
+				return;
+			}
 
 			const size_t outputSize = this->buffer.size() - this->squashStream->avail_out;
 			if (outputSize > 0)
@@ -84,10 +78,7 @@ namespace ofxSquash {
 					OFXSQUASH_WARNING << "Cannot write stream output. No WriteFunction has been set";
 				}
 			}
-
-			incomingBytesRemaining -= this->bufferSize;
-			data += this->bufferSize;
-		}
+		} while (status == SQUASH_PROCESSING);
 	}
 
 	//----------
@@ -108,7 +99,7 @@ namespace ofxSquash {
 
 		do {
 			this->squashStream->next_out = this->buffer.data();
-			this->squashStream->avail_out = this->bufferSize;
+			this->squashStream->avail_out = this->buffer.size();
 
 			status = squash_stream_finish(this->squashStream);
 
@@ -117,7 +108,7 @@ namespace ofxSquash {
 				return * this;
 			}
 
-			const size_t outputSize = this->bufferSize - this->squashStream->avail_out;
+			const size_t outputSize = this->buffer.size() - this->squashStream->avail_out;
 			if (outputSize > 0)
 			{
 				if (this->writeFunction) {
@@ -128,7 +119,6 @@ namespace ofxSquash {
 					OFXSQUASH_WARNING << "Cannot write stream output. No WriteFunction has been set";
 				}
 			}
-
 		} while (status == SQUASH_PROCESSING);
 
 		if (this->writeFunction) {

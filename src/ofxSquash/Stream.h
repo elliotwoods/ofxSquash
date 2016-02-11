@@ -32,9 +32,6 @@ namespace ofxSquash {
 		SquashStream * squashStream = nullptr;
 		WriteFunction writeFunction;
 
-		size_t bufferSize;
 		vector<uint8_t> buffer;
 	};
-
-
 }
