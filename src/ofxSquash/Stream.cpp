@@ -78,7 +78,8 @@ namespace ofxSquash {
 			if (outputSize > 0)
 			{
 				if (this->writeFunction) {
-					this->writeFunction(this->buffer.data(), outputSize);
+					WriteFunctionArguments args{ this->buffer.data(), outputSize, false };
+					this->writeFunction(args);
 				}
 				else {
 					OFXSQUASH_WARNING << "Cannot write stream output. No WriteFunction has been set";
@@ -121,7 +122,8 @@ namespace ofxSquash {
 			if (outputSize > 0)
 			{
 				if (this->writeFunction) {
-					this->writeFunction(this->buffer.data(), outputSize);
+					WriteFunctionArguments args{ this->buffer.data(), outputSize, false };
+					this->writeFunction(args);
 				}
 				else {
 					OFXSQUASH_WARNING << "Cannot write stream output. No WriteFunction has been set";
@@ -129,6 +131,11 @@ namespace ofxSquash {
 			}
 
 		} while (status == SQUASH_PROCESSING);
+
+		if (this->writeFunction) {
+			WriteFunctionArguments args{ nullptr, 0, true };
+			this->writeFunction(args);
+		}
 
 		squash_object_unref(this->squashStream);
 		this->squashStream = nullptr;

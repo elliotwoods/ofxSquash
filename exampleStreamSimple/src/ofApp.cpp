@@ -40,26 +40,26 @@ void ofApp::setup() {
 	//	to write to an output (e.g. a file or a network
 	//	stream). This function will be called periodically
 	//	as the stream compresses the data.
-	compressStream.setWriteFunction([&decompressStream](const uint8_t* data, size_t size) {
+	compressStream.setWriteFunction([&decompressStream](const ofxSquash::WriteFunctionArguments & args) {
 		cout << "Compressed" << endl;
 		cout << "==========" << endl;
 
-		auto compressedPacketString = string((const char*)data, size);
+		auto compressedPacketString = string((const char*)args.data, args.size);
 		cout << compressedPacketString << endl;
 
 		// In this example, our 'write' code for the compressor
 		//	feeds data into the decompressor's read funciton.
 		decompressStream << compressedPacketString;
 
-		cout << size << endl;
+		cout << args.size << endl;
 	});
 
 	// Setup a WriteFunction for our decompressor
 	//	(same as above).	
-	decompressStream.setWriteFunction([](const uint8_t* data, size_t size) {
+	decompressStream.setWriteFunction([](const ofxSquash::WriteFunctionArguments & args) {
 		cout << "Decompressed" << endl;
 		cout << "============" << endl;
-		cout << string((const char*)data, size) << endl;
+		cout << string((const char*)args.data, args.size) << endl;
 	});
 
 

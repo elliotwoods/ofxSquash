@@ -4,7 +4,13 @@
 #include "Constants.h"
 
 namespace ofxSquash {
-	typedef function<void(const uint8_t *, size_t size)> WriteFunction;
+	struct WriteFunctionArguments {
+		const uint8_t * data;
+		size_t size;
+		bool isFinished;
+	};
+
+	typedef function<void(const WriteFunctionArguments &)> WriteFunction;
 
 	class Stream {
 	public:
