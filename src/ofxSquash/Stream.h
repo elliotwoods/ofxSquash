@@ -28,6 +28,7 @@ namespace ofxSquash {
 		Stream & operator<<(const Finish &);
 	protected:
 		Codec codec;
+		Direction direction;
 		SquashStream * squashStream = nullptr;
 		WriteFunction writeFunction;
 

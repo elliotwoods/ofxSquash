@@ -8,18 +8,13 @@ namespace ofxSquash {
 		: writeFunction(writeFunction)
 		, bufferSize(bufferSize)
 		, buffer(codec.getMaxCompressedSize(bufferSize))
+		, direction(direction)
 	{
-		auto squashDirection = direction == Direction::Compress ? SQUASH_STREAM_COMPRESS : SQUASH_STREAM_DECOMPRESS;
-
 		if (!codec.isValid()) {
 			OFXSQUASH_ERROR << "Please specify a valid codec when initializing a stream";
 		}
 		else {
 			this->codec = codec;
-			this->squashStream = squash_stream_new(codec.getSquashCodec(), squashDirection, nullptr);
-			if (!squashStream) {
-				OFXSQUASH_ERROR << "Failed to initialize stream for codec [" << codec.getName() << "]";
-			}
 		}
 	}
 
@@ -44,8 +39,12 @@ namespace ofxSquash {
 	//----------
 	void Stream::read(const void * dataRaw, size_t size) {
 		if (!this->squashStream) {
-			OFXSQUASH_ERROR << "Cannot read because Stream is expired.";
-			return;
+			auto squashDirection = direction == Direction::Compress ? SQUASH_STREAM_COMPRESS : SQUASH_STREAM_DECOMPRESS;
+
+			this->squashStream = squash_stream_new(codec.getSquashCodec(), squashDirection, nullptr);
+			if (!squashStream) {
+				OFXSQUASH_ERROR << "Failed to initialize stream for codec [" << codec.getName() << "]";
+			}
 		}
 
 		const uint8_t* data = (const uint8_t*) dataRaw;
