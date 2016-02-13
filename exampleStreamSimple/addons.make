@@ -1,0 +1,2 @@
+ofxProfiler
+ofxSquash
