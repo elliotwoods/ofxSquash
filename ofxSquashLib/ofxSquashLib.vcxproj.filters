@@ -75,6 +75,9 @@
     <ClInclude Include="..\src\ofxSquash\Stream.h">
       <Filter>src\ofxSquash</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\ofxSquash\Initializer.h">
+      <Filter>src\ofxSquash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ofxSquash.cpp">
@@ -84,6 +87,9 @@
       <Filter>src\ofxSquash</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxSquash\Stream.cpp">
+      <Filter>src\ofxSquash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxSquash\Initializer.cpp">
       <Filter>src\ofxSquash</Filter>
     </ClCompile>
   </ItemGroup>

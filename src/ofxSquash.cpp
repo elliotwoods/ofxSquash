@@ -1,5 +1,7 @@
 #include "ofxSquash.h"
 
+#include "ofxSquash/Initializer.h"
+
 #include "ofMain.h"
 #include <squash/squash.h>
 
@@ -13,17 +15,9 @@ void populateCodecListCallback(SquashCodec * squashCodec, void * data) {
 
 namespace ofxSquash {
 	//----------
-	SquashInitializer::SquashInitializer() {
-		auto pluginDir = ofToDataPath("../plugins/squash", true);
-		ofStringReplace(pluginDir, "\\", "/");
-		squash_set_default_search_path(pluginDir.c_str());
-	}
-
-	//----------
-	SquashInitializer squashInitializer;
-
-	//----------
 	map<string, Codec> getCodecList(bool returnOnlyValid) {
+		ofxSquash::initialize();
+
 		CodecList codecs;
 
 		squash_foreach_codec(populateCodecListCallback, &codecs);

@@ -1,6 +1,8 @@
 #include "Codec.h"
 #include "Constants.h"
 
+#include "Initializer.h"
+
 #include "ofLog.h"
 #include <iostream>
 
@@ -18,6 +20,8 @@ namespace ofxSquash {
 
 	//----------
 	Codec::Codec(SquashCodec * squashCodec) {
+		ofxSquash::initialize();
+
 		this->name = squash_codec_get_name(squashCodec);
 		this->valid = squash_codec_init(squashCodec) == SQUASH_OK;
 		this->squashCodec = squashCodec;
@@ -25,6 +29,8 @@ namespace ofxSquash {
 
 	//----------
 	Codec::Codec(string codecName) {
+		ofxSquash::initialize();
+
 		this->name = codecName;
 		this->squashCodec = squash_get_codec(codecName.c_str());
 		if (this->squashCodec) {
