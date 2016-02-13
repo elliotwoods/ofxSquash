@@ -10,14 +10,11 @@ Go to https://quixdb.github.io/squash-benchmark/ to see which compression algori
 Compatability
 =============
 
-This addon is under active early-stage development.
-
-Tested with
------------
+This addon is tested and working with :
 
 * openFrameworks 0.9.0+
-* Visual Studio 2015 x64
-
+* Visual Studio 2015 x64 (Windows 10)
+* XCode 7.2 x64 (OSX 10.11) _NB : The ncompress plugin doesn't work (causes a crash)._
 
 License
 =======
