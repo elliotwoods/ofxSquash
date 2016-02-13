@@ -1,11 +1,11 @@
 ofxSquash
 =========
 
-Squash is a library of compression algorithms with clean abstraction so that you can access a wide range of compression algorithms with a single API. This addon is an implementation of Squash (https://quixdb.github.io/squash/) for use with openFrameworks.
-
-Go to https://quixdb.github.io/squash-benchmark/ to see which compression algorithm is best for your use case.
-
 ![exampleVideoGrabberAndGui](https://raw.githubusercontent.com/elliotwoods/ofxSquash/master/exampleVideoGrabberAndGui/screenshot.png)
+
+![Squash](https://quixdb.github.io/) is an open source library of compression algorithms, and ofxSquash is a C++ wrapper for that libary for use with openFrameworks.
+
+There's a really helpful system at https://quixdb.github.io/squash-benchmark/ which can help you choose which algorithm to pick for your data.
 
 Compatability
 =============
@@ -14,7 +14,9 @@ This addon is tested and working with :
 
 * openFrameworks 0.9.0+
 * Visual Studio 2015 x64 (Windows 10)
-* XCode 7.2 x64 (OSX 10.11) _NB : The ncompress plugin doesn't work (causes a crash)._
+* XCode 7.2 x64 (OSX 10.11) 
+
+Note : On OSX, the `ncompress` plugin doesn't work (causes a crash), so we generally remove it.
 
 License
 =======
