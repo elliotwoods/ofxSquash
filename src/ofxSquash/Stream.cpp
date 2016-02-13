@@ -5,9 +5,10 @@
 namespace ofxSquash {
 	//----------
 	Stream::Stream(Codec codec, Direction direction, WriteFunction writeFunction, size_t bufferSize)
-		: writeFunction(writeFunction)
-		, buffer(bufferSize)
+		: codec(codec)
 		, direction(direction)
+		, writeFunction(writeFunction)
+		, buffer(bufferSize)
 	{
 		if (!codec.isValid()) {
 			OFXSQUASH_ERROR << "Please specify a valid codec when initializing a stream";
@@ -38,9 +39,14 @@ namespace ofxSquash {
 	//----------
 	void Stream::read(const void * dataRaw, size_t size) {
 		if (!this->squashStream) {
+			if (!this->codec.isValid()) {
+				OFXSQUASH_ERROR << "Cannot read stream. Codec is not initialized";
+				return;
+			}
+
 			auto squashDirection = direction == Direction::Compress ? SQUASH_STREAM_COMPRESS : SQUASH_STREAM_DECOMPRESS;
 
-			this->squashStream = squash_stream_new(codec.getSquashCodec(), squashDirection, nullptr);
+			this->squashStream = squash_stream_new(this->codec.getSquashCodec(), squashDirection, nullptr);
 			if (!squashStream) {
 				OFXSQUASH_ERROR << "Failed to initialize stream for codec [" << codec.getName() << "]";
 			}
