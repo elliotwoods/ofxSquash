@@ -16,7 +16,7 @@ namespace ofxSquash {
 	SquashInitializer::SquashInitializer() {
 		auto pluginDir = ofToDataPath("../plugins/squash", true);
 		ofStringReplace(pluginDir, "\\", "/");
-		squash_set_plugin_directory(pluginDir.c_str());
+		squash_set_default_search_path(pluginDir.c_str());
 	}
 
 	//----------

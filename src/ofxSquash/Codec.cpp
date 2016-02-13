@@ -65,6 +65,7 @@ namespace ofxSquash {
 		if (size == 0) {
 			OFXSQUASH_WARNING << "Codec [" << this->getName() << "] doesn't support getUncompressedSize (sorry! you'll need to allocate 'enough' yourself)";
 		}
+		return size;
 	}
 
 	//----------
