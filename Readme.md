@@ -64,6 +64,48 @@ The following plugins do not work on these platforms:
 * doboz
 * pithy
 
+Usage
+=====
+
+Basic API
+---------
+
+To get a list of available algorithms:
+
+```c++
+	auto codecs = ofxSquash::getCodecList();
+	cout << "Squash found " << codecs.size() << " codecs." << endl;
+	for(auto & codec : codecs) {
+	  cout << "* " << codec.getName() << endl;
+	}
+```
+
+Generally we use the class `ofxSquash::Codec` for most of our work, e.g.:
+
+```c++
+// create a Density codec object
+auto codec = ofxSquash::Codec("density");
+
+//make something to compress
+string text = "Something to compress";
+
+// compress the text using our codec
+auto compressedText = codec.compress(text);
+
+// uncompress the text again, resulting in our original string
+auto uncompressedText = codec.uncompress(compressedText);
+```
+
+Stream API
+----------
+
+Often whilst we're compressing, we might not want to pass the entire data to the codec at once, for example:
+
+* We're compressing from one file to another, and don't want to keep the entire contents in memory
+* Latency is an issue, and we want the next process to begin before compression is completed (e.g. transmit to the network whilst compression is still ongoing).
+
+Check exampleStreamSimple for help on how to use this (note you need to provide a lambda function to `ofxSquash::Stream`. This function is called whenever there is data available to write).
+
 Compatability
 =============
 
