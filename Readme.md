@@ -3,9 +3,66 @@ ofxSquash
 
 ![exampleVideoGrabberAndGui](https://raw.githubusercontent.com/elliotwoods/ofxSquash/master/exampleVideoGrabberAndGui/screenshot.png)
 
-![Squash](https://quixdb.github.io/) is an open source library of compression algorithms, and ofxSquash is a C++ wrapper for that libary for use with openFrameworks.
+[Squash](https://quixdb.github.io/) is an open source library for compressing data, and comes with a range of compression algorithms. ofxSquash is a C++ wrapper for that libary for use with openFrameworks and supports both simple and stream API's. 
+
+Comprsesion algorithms
+----------------------
+
+Squash ships with plugin implementations for the following algorithms:
+
+* brieflz
+* brotli
+* bsc
+* bzip2
+* copy (no compression)
+* crush
+* csc
+* density
+* doboz
+* fari
+* fastlz
+* gipfeli
+* heatshrink
+* libdeflate
+* lz4
+* lzf
+* lzg
+* lzham
+* lzjb
+* lzma
+* lzo
+* miniz
+* ms-compress
+* ncompress
+* pithy
+* quicklz
+* snappy
+* wflz
+* yalz77
+* zlib-ng
+* zlib
+* zling
+* zpaq
+* zstd
 
 There's a really helpful system at https://quixdb.github.io/squash-benchmark/ which can help you choose which algorithm to pick for your data.
+
+Unsupported algorithms
+----------------------
+
+The following plugins do not work on these platforms:
+
+### OSX
+
+* csc
+* ncompress
+* quicklz
+
+### Windows
+
+* csc
+* doboz
+* pithy
 
 Compatability
 =============
