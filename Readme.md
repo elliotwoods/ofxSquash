@@ -106,6 +106,51 @@ Often whilst we're compressing, we might not want to pass the entire data to the
 
 Check exampleStreamSimple for help on how to use this (note you need to provide a lambda function to `ofxSquash::Stream`. This function is called whenever there is data available to write).
 
+```c++
+//initialise the codec
+auto codec = ofxSquash::Codec("density");
+
+//initialise the stream
+ofxSquash::Stream compressStream(codec, ofxSquash::Direction::Compress);
+
+// Setup a WriteFunction for compression.
+// This function is called whenever the stream wants
+//	to write to an output (e.g. a file or a network
+//	stream). This function will be called periodically
+//	as the stream compresses the data.
+compressStream.setWriteFunction([&decompressStream](const ofxSquash::WriteFunctionArguments & args) {
+	// In this example, our 'write' code for the compressor just dumps the output to console
+	auto compressedPacketString = string((const char*)args.data, args.size);
+	cout << compressedPacketString << endl;
+});
+
+// Stream something into the compressor.
+string text = " \n\
+	....XXXXXXXX \n\
+	..XXX..ooooXXX \n\
+	..X....oooo..X \n\
+	.X....oooooo..X \n\
+	XX...oo....oo.XX \n\
+	Xooooo......oooX \n\
+	Xo..oo......oooX \n\
+	X....o......oo.X \n\
+	X....oo....oo..X \n\
+	Xo..ooooooooo..X \n\
+	XoooXXXXXXXXoo.X \n\
+	.XXX..X..X..XXX \n\
+	..X...X..X...X \n\
+	..X..........X \n\
+	...X........X \n\
+	....XXXXXXXX \n\
+	";
+compressStream << text;
+
+// Important!!
+// We also need to send Finish to the stream
+compressStream << ofxSquash::Stream::Finish();
+
+// The stream is now closed. It will reopen if you stream any more data into it
+```
 Compatability
 =============
 
@@ -115,7 +160,7 @@ This addon is tested and working with :
 * Visual Studio 2015 x64 (Windows 10)
 * XCode 7.2 x64 (OSX 10.11) 
 
-Note : On OSX, the `ncompress` plugin doesn't work (causes a crash), so we generally remove it.
+Note : On OSX, the `ncompress` plugin crashes, so remove it from the plugins folder.
 
 License
 =======
