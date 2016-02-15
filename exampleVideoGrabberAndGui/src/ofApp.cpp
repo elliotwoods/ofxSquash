@@ -123,7 +123,7 @@ void ofApp::setup(){
 		auto toGraph = [this, args](float compressionRatio, float compressionSpeed) {
 			ofVec2f pos;
 			
-			pos.x = ofMap(log(compressionRatio), log(0.2), log(this->maxCompressionRatio), 40, args.localBounds.width - 40);
+			pos.x = ofMap(log(compressionRatio), log(0.1), log(this->maxCompressionRatio), 40, args.localBounds.width - 40);
 			pos.y = ofMap(log(compressionSpeed), log(1), log(this->maxCompressionSpeed), args.localBounds.height - 40, 40);
 
 			return pos;
@@ -150,10 +150,12 @@ void ofApp::setup(){
 			for (float compressionRatio = 0.1; compressionRatio < this->maxCompressionRatio; compressionRatio += 0.1f) {
 				auto pos = toGraph(compressionRatio, 0);
 				ofLine(pos.x, 40, pos.x, args.localBounds.height - 40);
+				ofDrawBitmapString(ofToString(compressionRatio) + "x", pos.x + 2, args.localBounds.height - 40 - 2);
 			}
 			for (float compressionSpeed = 50; compressionSpeed < this->maxCompressionSpeed; compressionSpeed += 50.0f) {
 				auto pos = toGraph(0, compressionSpeed);
 				ofLine(40, pos.y, args.localBounds.width - 40, pos.y);
+				ofDrawBitmapString(ofToString(compressionSpeed) + "MB/s", 40 + 2, pos.y - 2);
 			}
 		}
 		ofPopStyle();
