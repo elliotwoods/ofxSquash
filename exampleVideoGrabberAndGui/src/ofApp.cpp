@@ -11,12 +11,12 @@ void ofApp::setup(){
 	//
 	this->gui.init();
 	
-	auto verticalStrip = ofxCvGui::makeStrip(ofxCvGui::Panels::Groups::Strip::Direction::Vertical);
-	auto horizontalStrip = ofxCvGui::makeStrip();
+	auto verticalStrip = ofxCvGui::Panels::Groups::makeStrip(ofxCvGui::Panels::Groups::Strip::Direction::Vertical);
+	auto horizontalStrip = ofxCvGui::Panels::Groups::makeStrip();
 
-	auto videoPanel = ofxCvGui::makePanel(this->video, "Camera");
-	auto compressedPanel = ofxCvGui::makePanel(this->compressed, "Compressed");
-	auto graphPanel = ofxCvGui::makeBlank("Results");
+	auto videoPanel = ofxCvGui::Panels::make(this->video, "Camera");
+	auto compressedPanel = ofxCvGui::Panels::make(this->compressed, "Compressed");
+	auto graphPanel = ofxCvGui::Panels::makeBlank("Results");
 
 	horizontalStrip->add(videoPanel);
 	horizontalStrip->add(compressedPanel);
