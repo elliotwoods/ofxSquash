@@ -16,6 +16,7 @@
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		E72F1F8E1C7B659900C5CAF8 /* Initializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E72F1F8C1C7B659900C5CAF8 /* Initializer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E72F1F8C1C7B659900C5CAF8 /* Initializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Initializer.cpp; path = ../src/ofxSquash/Initializer.cpp; sourceTree = "<group>"; };
+		E72F1F8D1C7B659900C5CAF8 /* Initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Initializer.h; path = ../src/ofxSquash/Initializer.h; sourceTree = "<group>"; };
 		E9F27351BC10CF07084CB283 /* context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = context.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/context.h; sourceTree = SOURCE_ROOT; };
 		EE75661CC873EE43CA8AD95C /* Codec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Codec.cpp; path = ../../../addons/ofxSquash/src/ofxSquash/Codec.cpp; sourceTree = SOURCE_ROOT; };
 		F9C2CA961F0748F6295F684D /* ofxProfiler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxProfiler.h; path = ../../../addons/ofxProfiler/src/ofxProfiler.h; sourceTree = SOURCE_ROOT; };
@@ -100,6 +103,8 @@
 		1A6B953FE7CC62BAA1D52192 /* ofxSquash */ = {
 			isa = PBXGroup;
 			children = (
+				E72F1F8C1C7B659900C5CAF8 /* Initializer.cpp */,
+				E72F1F8D1C7B659900C5CAF8 /* Initializer.h */,
 				EE75661CC873EE43CA8AD95C /* Codec.cpp */,
 				CDDCD21BAECBA974B884CBE2 /* Codec.h */,
 				A186865906DE158A82F15F2C /* Constants.h */,
@@ -353,6 +358,7 @@
 				ADFC80A9593467DCA96F6A17 /* Codec.cpp in Sources */,
 				36BF87080017D570CCD003FF /* Stream.cpp in Sources */,
 				0F045A94B36D18E2EAD14418 /* ofxSquash.cpp in Sources */,
+				E72F1F8E1C7B659900C5CAF8 /* Initializer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
