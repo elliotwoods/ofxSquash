@@ -152,7 +152,7 @@ void ofApp::setup(){
 				ofLine(pos.x, 40, pos.x, args.localBounds.height - 40);
 				ofDrawBitmapString(ofToString(compressionRatio) + "x", pos.x + 2, args.localBounds.height - 40 - 2);
 			}
-			for (float compressionSpeed = 50; compressionSpeed < this->maxCompressionSpeed; compressionSpeed += 50.0f) {
+			for (float compressionSpeed = 100; compressionSpeed < this->maxCompressionSpeed; compressionSpeed += 100.0f) {
 				auto pos = toGraph(0, compressionSpeed);
 				ofLine(40, pos.y, args.localBounds.width - 40, pos.y);
 				ofDrawBitmapString(ofToString(compressionSpeed) + "MB/s", 40 + 2, pos.y - 2);
