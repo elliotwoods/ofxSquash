@@ -34,6 +34,9 @@ namespace ofxSquash {
 			}
 		}
 		
+		if(codecs.empty()) {
+			ofLogError("ofxSquash::getCodecList") << "No codecs found. Please make sure that there is a data folder, and that if you are taking your project outside of the openFrameworks folder, that you have a local copy of the plugins next to your app, e.g. bin/plugins/squash/*[pluginnames]*/";
+		}
 		return codecs;
 	}
 }
