@@ -46,7 +46,7 @@
     <ClCompile Include="..\src\ofxSquash\Stream.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C5348207-A7AB-4078-85FA-ED5B98A75E87}</ProjectGuid>
+    <ProjectGuid>{FAA73572-FD12-41FA-8FBE-CB47482D2D87}</ProjectGuid>
     <RootNamespace>ofxSquash</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

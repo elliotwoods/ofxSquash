@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F045A94B36D18E2EAD14418 /* ofxSquash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EA245EB5B83EC3BAB6B8B10 /* ofxSquash.cpp */; };
+		2EF231CE1CB503D4D9A36B5C /* Activity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FEBBA81C1E7925F652A2B8 /* Activity.cpp */; };
+		36BF87080017D570CCD003FF /* Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6037EE2BB1016F8BACFF3C42 /* Stream.cpp */; };
+		ADFC80A9593467DCA96F6A17 /* Codec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE75661CC873EE43CA8AD95C /* Codec.cpp */; };
+		BEBCD991B2284AB50CAF0769 /* Scope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37615A8DD4F14CA80D461BE /* Scope.cpp */; };
+		C94220098030F495D8575B63 /* ofxProfiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77AD9C72FFAF85F090CC836F /* ofxProfiler.cpp */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		013C3CE8A239757858AB6123 /* file.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = file.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/file.h; sourceTree = SOURCE_ROOT; };
+		07D844CE77F4ED3B32969D24 /* object.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = object.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/object.h; sourceTree = SOURCE_ROOT; };
+		0EF8536EC40D66ACB75A496B /* license.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = license.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/license.h; sourceTree = SOURCE_ROOT; };
+		23C558BE0D10DE7D27378768 /* types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = types.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/types.h; sourceTree = SOURCE_ROOT; };
+		2D048A78715E2089DB12767A /* memory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = memory.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/memory.h; sourceTree = SOURCE_ROOT; };
+		39659F5A246973EBA5123484 /* splice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = splice.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/splice.h; sourceTree = SOURCE_ROOT; };
+		4D0FF4DD9F61CE8422140685 /* status.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = status.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/status.h; sourceTree = SOURCE_ROOT; };
+		6037EE2BB1016F8BACFF3C42 /* Stream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Stream.cpp; path = ../../../addons/ofxSquash/src/ofxSquash/Stream.cpp; sourceTree = SOURCE_ROOT; };
+		74FEBBA81C1E7925F652A2B8 /* Activity.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Activity.cpp; path = ../../../addons/ofxProfiler/src/ofxProfiler/Activity.cpp; sourceTree = SOURCE_ROOT; };
+		77AD9C72FFAF85F090CC836F /* ofxProfiler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxProfiler.cpp; path = ../../../addons/ofxProfiler/src/ofxProfiler.cpp; sourceTree = SOURCE_ROOT; };
+		7EA245EB5B83EC3BAB6B8B10 /* ofxSquash.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSquash.cpp; path = ../../../addons/ofxSquash/src/ofxSquash.cpp; sourceTree = SOURCE_ROOT; };
+		8A87A6A5783DE49C68217EB9 /* stream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stream.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/stream.h; sourceTree = SOURCE_ROOT; };
+		96B6B434E67C604B6BA93DD5 /* codec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = codec.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/codec.h; sourceTree = SOURCE_ROOT; };
+		9BCE23C346EE9529D8CBCA8A /* options.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = options.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/options.h; sourceTree = SOURCE_ROOT; };
+		A0DD16953EBC8EA6B0467550 /* squash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = squash.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/squash.h; sourceTree = SOURCE_ROOT; };
+		A186865906DE158A82F15F2C /* Constants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Constants.h; path = ../../../addons/ofxSquash/src/ofxSquash/Constants.h; sourceTree = SOURCE_ROOT; };
+		A7C66D1213F9DF94786A1D70 /* plugin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = plugin.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/plugin.h; sourceTree = SOURCE_ROOT; };
+		BA3EAA5D5AF32C40B7EEB96A /* version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = version.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/version.h; sourceTree = SOURCE_ROOT; };
+		BB38778543B7983308673B4B /* Stream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Stream.h; path = ../../../addons/ofxSquash/src/ofxSquash/Stream.h; sourceTree = SOURCE_ROOT; };
+		CDDCD21BAECBA974B884CBE2 /* Codec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Codec.h; path = ../../../addons/ofxSquash/src/ofxSquash/Codec.h; sourceTree = SOURCE_ROOT; };
+		CE2BD14BAED09BC4C7C91373 /* Activity.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Activity.h; path = ../../../addons/ofxProfiler/src/ofxProfiler/Activity.h; sourceTree = SOURCE_ROOT; };
+		E37615A8DD4F14CA80D461BE /* Scope.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Scope.cpp; path = ../../../addons/ofxProfiler/src/ofxProfiler/Scope.cpp; sourceTree = SOURCE_ROOT; };
+		E3CDC76011081C6B41CB232A /* ofxSquash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSquash.h; path = ../../../addons/ofxSquash/src/ofxSquash.h; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* exampleStreamSimpleDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exampleStreamSimpleDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E9F27351BC10CF07084CB283 /* context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = context.h; path = ../../../addons/ofxSquash/libs/squash/include/squash/context.h; sourceTree = SOURCE_ROOT; };
+		EE75661CC873EE43CA8AD95C /* Codec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Codec.cpp; path = ../../../addons/ofxSquash/src/ofxSquash/Codec.cpp; sourceTree = SOURCE_ROOT; };
+		F9C2CA961F0748F6295F684D /* ofxProfiler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxProfiler.h; path = ../../../addons/ofxProfiler/src/ofxProfiler.h; sourceTree = SOURCE_ROOT; };
+		FEDBCA50B1914E3F8C28176E /* Scope.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Scope.h; path = ../../../addons/ofxProfiler/src/ofxProfiler/Scope.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A6B953FE7CC62BAA1D52192 /* ofxSquash */ = {
+			isa = PBXGroup;
+			children = (
+				EE75661CC873EE43CA8AD95C /* Codec.cpp */,
+				CDDCD21BAECBA974B884CBE2 /* Codec.h */,
+				A186865906DE158A82F15F2C /* Constants.h */,
+				6037EE2BB1016F8BACFF3C42 /* Stream.cpp */,
+				BB38778543B7983308673B4B /* Stream.h */,
+			);
+			name = ofxSquash;
+			sourceTree = "<group>";
+		};
+		42FF2CAD6F12A6088F52FF16 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				D51CFC3CB07A9CAFF727F6E1 /* squash */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		45AFEE4B16BE8DCB2AE4EC98 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B953FE7CC62BAA1D52192 /* ofxSquash */,
+				7EA245EB5B83EC3BAB6B8B10 /* ofxSquash.cpp */,
+				E3CDC76011081C6B41CB232A /* ofxSquash.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		54C9F967AB1C0B664C4BE04E /* squash */ = {
+			isa = PBXGroup;
+			children = (
+				96B6B434E67C604B6BA93DD5 /* codec.h */,
+				E9F27351BC10CF07084CB283 /* context.h */,
+				013C3CE8A239757858AB6123 /* file.h */,
+				0EF8536EC40D66ACB75A496B /* license.h */,
+				2D048A78715E2089DB12767A /* memory.h */,
+				07D844CE77F4ED3B32969D24 /* object.h */,
+				9BCE23C346EE9529D8CBCA8A /* options.h */,
+				A7C66D1213F9DF94786A1D70 /* plugin.h */,
+				39659F5A246973EBA5123484 /* splice.h */,
+				A0DD16953EBC8EA6B0467550 /* squash.h */,
+				4D0FF4DD9F61CE8422140685 /* status.h */,
+				8A87A6A5783DE49C68217EB9 /* stream.h */,
+				23C558BE0D10DE7D27378768 /* types.h */,
+				BA3EAA5D5AF32C40B7EEB96A /* version.h */,
+			);
+			name = squash;
+			sourceTree = "<group>";
+		};
+		6948EE371B920CB800B5AC1A /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = local_addons;
+			sourceTree = "<group>";
+		};
+		6BAD28AD1F95CEE9785A84DC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				54C9F967AB1C0B664C4BE04E /* squash */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		726BDF53BE3396C0141C5866 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A0F6912F293FBA80508E9025 /* ofxProfiler */,
+				77AD9C72FFAF85F090CC836F /* ofxProfiler.cpp */,
+				F9C2CA961F0748F6295F684D /* ofxProfiler.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A0F6912F293FBA80508E9025 /* ofxProfiler */ = {
+			isa = PBXGroup;
+			children = (
+				74FEBBA81C1E7925F652A2B8 /* Activity.cpp */,
+				CE2BD14BAED09BC4C7C91373 /* Activity.h */,
+				E37615A8DD4F14CA80D461BE /* Scope.cpp */,
+				FEDBCA50B1914E3F8C28176E /* Scope.h */,
+			);
+			name = ofxProfiler;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				E098D989BD07A609FF7949A8 /* ofxProfiler */,
+				DA8B67BF9E31DD0B383DFAC4 /* ofxSquash */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		D51CFC3CB07A9CAFF727F6E1 /* squash */ = {
+			isa = PBXGroup;
+			children = (
+				6BAD28AD1F95CEE9785A84DC /* include */,
+			);
+			name = squash;
+			sourceTree = "<group>";
+		};
+		DA8B67BF9E31DD0B383DFAC4 /* ofxSquash */ = {
+			isa = PBXGroup;
+			children = (
+				45AFEE4B16BE8DCB2AE4EC98 /* src */,
+				42FF2CAD6F12A6088F52FF16 /* libs */,
+			);
+			name = ofxSquash;
+			sourceTree = "<group>";
+		};
+		E098D989BD07A609FF7949A8 /* ofxProfiler */ = {
+			isa = PBXGroup;
+			children = (
+				726BDF53BE3396C0141C5866 /* src */,
+			);
+			name = ofxProfiler;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
+				E4B69B5B0A3A1756003C02F2 /* exampleStreamSimpleDebug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* exampleStreamSimple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "exampleStreamSimple" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = exampleStreamSimple;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* exampleStreamSimpleDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "exampleStreamSimple" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* exampleStreamSimple */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -aved ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved ../../../libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				2EF231CE1CB503D4D9A36B5C /* Activity.cpp in Sources */,
+				BEBCD991B2284AB50CAF0769 /* Scope.cpp in Sources */,
+				C94220098030F495D8575B63 /* ofxProfiler.cpp in Sources */,
+				ADFC80A9593467DCA96F6A17 /* Codec.cpp in Sources */,
+				36BF87080017D570CCD003FF /* Stream.cpp in Sources */,
+				0F045A94B36D18E2EAD14418 /* ofxSquash.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxProfiler/src,
+					../../../addons/ofxProfiler/src/ofxProfiler,
+					../../../addons/ofxSquash/libs,
+					../../../addons/ofxSquash/libs/squash,
+					../../../addons/ofxSquash/libs/squash/bin,
+					../../../addons/ofxSquash/libs/squash/bin/osx,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brieflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brotli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bsc,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bzip2,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/copy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/crush,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/density,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fari,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fastlz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/gipfeli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/heatshrink,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/libdeflate,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lz4,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzf,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzg,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzham,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzjb,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzma,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzo,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/miniz,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ms-compress",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ncompress,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/quicklz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/snappy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/wflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/yalz77,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib-ng",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zling,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zpaq,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zstd,
+					../../../addons/ofxSquash/libs/squash/include,
+					../../../addons/ofxSquash/libs/squash/include/squash,
+					../../../addons/ofxSquash/libs/squash/lib,
+					../../../addons/ofxSquash/libs/squash/lib/osx,
+					../../../addons/ofxSquash/libs/squash/lib/osx/x64,
+					../../../addons/ofxSquash/src,
+					../../../addons/ofxSquash/src/ofxSquash,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brieflz/libsquash0.8-plugin-brieflz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brotli/libsquash0.8-plugin-brotli.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bsc/libsquash0.8-plugin-bsc.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bzip2/libsquash0.8-plugin-bzip2.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/copy/libsquash0.8-plugin-copy.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/crush/libsquash0.8-plugin-crush.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/density/libsquash0.8-plugin-density.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fari/libsquash0.8-plugin-fari.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fastlz/libsquash0.8-plugin-fastlz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/gipfeli/libsquash0.8-plugin-gipfeli.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/heatshrink/libsquash0.8-plugin-heatshrink.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/libdeflate/libsquash0.8-plugin-libdeflate.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lz4/libsquash0.8-plugin-lz4.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzf/libsquash0.8-plugin-lzf.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzg/libsquash0.8-plugin-lzg.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzham/libsquash0.8-plugin-lzham.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzjb/libsquash0.8-plugin-lzjb.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzma/libsquash0.8-plugin-lzma.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzo/libsquash0.8-plugin-lzo.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/miniz/libsquash0.8-plugin-miniz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ms-compress/libsquash0.8-plugin-ms-compress.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ncompress/libsquash0.8-plugin-ncompress.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/quicklz/libsquash0.8-plugin-quicklz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/snappy/libsquash0.8-plugin-snappy.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/wflz/libsquash0.8-plugin-wflz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/yalz77/libsquash0.8-plugin-yalz77.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib/libsquash0.8-plugin-zlib.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib-ng/libsquash0.8-plugin-zlib-ng.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zling/libsquash0.8-plugin-zling.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zpaq/libsquash0.8-plugin-zpaq.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zstd/libsquash0.8-plugin-zstd.dylib",
+					../../../addons/ofxSquash/libs/squash/lib/osx/x64/libsquash0.8.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxProfiler/src,
+					../../../addons/ofxProfiler/src/ofxProfiler,
+					../../../addons/ofxSquash/libs,
+					../../../addons/ofxSquash/libs/squash,
+					../../../addons/ofxSquash/libs/squash/bin,
+					../../../addons/ofxSquash/libs/squash/bin/osx,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brieflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brotli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bsc,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bzip2,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/copy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/crush,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/density,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fari,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fastlz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/gipfeli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/heatshrink,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/libdeflate,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lz4,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzf,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzg,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzham,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzjb,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzma,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzo,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/miniz,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ms-compress",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ncompress,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/quicklz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/snappy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/wflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/yalz77,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib-ng",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zling,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zpaq,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zstd,
+					../../../addons/ofxSquash/libs/squash/include,
+					../../../addons/ofxSquash/libs/squash/include/squash,
+					../../../addons/ofxSquash/libs/squash/lib,
+					../../../addons/ofxSquash/libs/squash/lib/osx,
+					../../../addons/ofxSquash/libs/squash/lib/osx/x64,
+					../../../addons/ofxSquash/src,
+					../../../addons/ofxSquash/src/ofxSquash,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brieflz/libsquash0.8-plugin-brieflz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brotli/libsquash0.8-plugin-brotli.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bsc/libsquash0.8-plugin-bsc.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bzip2/libsquash0.8-plugin-bzip2.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/copy/libsquash0.8-plugin-copy.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/crush/libsquash0.8-plugin-crush.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/density/libsquash0.8-plugin-density.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fari/libsquash0.8-plugin-fari.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fastlz/libsquash0.8-plugin-fastlz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/gipfeli/libsquash0.8-plugin-gipfeli.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/heatshrink/libsquash0.8-plugin-heatshrink.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/libdeflate/libsquash0.8-plugin-libdeflate.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lz4/libsquash0.8-plugin-lz4.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzf/libsquash0.8-plugin-lzf.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzg/libsquash0.8-plugin-lzg.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzham/libsquash0.8-plugin-lzham.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzjb/libsquash0.8-plugin-lzjb.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzma/libsquash0.8-plugin-lzma.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzo/libsquash0.8-plugin-lzo.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/miniz/libsquash0.8-plugin-miniz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ms-compress/libsquash0.8-plugin-ms-compress.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ncompress/libsquash0.8-plugin-ncompress.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/quicklz/libsquash0.8-plugin-quicklz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/snappy/libsquash0.8-plugin-snappy.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/wflz/libsquash0.8-plugin-wflz.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/yalz77/libsquash0.8-plugin-yalz77.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib/libsquash0.8-plugin-zlib.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib-ng/libsquash0.8-plugin-zlib-ng.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zling/libsquash0.8-plugin-zling.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zpaq/libsquash0.8-plugin-zpaq.dylib",
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zstd/libsquash0.8-plugin-zstd.dylib",
+					../../../addons/ofxSquash/libs/squash/lib/osx/x64/libsquash0.8.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxProfiler/src,
+					../../../addons/ofxProfiler/src/ofxProfiler,
+					../../../addons/ofxSquash/libs,
+					../../../addons/ofxSquash/libs/squash,
+					../../../addons/ofxSquash/libs/squash/bin,
+					../../../addons/ofxSquash/libs/squash/bin/osx,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brieflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brotli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bsc,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bzip2,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/copy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/crush,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/density,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fari,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fastlz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/gipfeli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/heatshrink,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/libdeflate,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lz4,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzf,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzg,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzham,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzjb,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzma,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzo,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/miniz,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ms-compress",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ncompress,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/quicklz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/snappy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/wflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/yalz77,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib-ng",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zling,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zpaq,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zstd,
+					../../../addons/ofxSquash/libs/squash/include,
+					../../../addons/ofxSquash/libs/squash/include/squash,
+					../../../addons/ofxSquash/libs/squash/lib,
+					../../../addons/ofxSquash/libs/squash/lib/osx,
+					../../../addons/ofxSquash/libs/squash/lib/osx/x64,
+					../../../addons/ofxSquash/src,
+					../../../addons/ofxSquash/src/ofxSquash,
+				);
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					"\"$(SRCROOT)/../libs/squash/lib/osx/x64/libsquash0.8.a\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxProfiler/src,
+					../../../addons/ofxProfiler/src/ofxProfiler,
+					../../../addons/ofxSquash/libs,
+					../../../addons/ofxSquash/libs/squash,
+					../../../addons/ofxSquash/libs/squash/bin,
+					../../../addons/ofxSquash/libs/squash/bin/osx,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brieflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/brotli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bsc,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/bzip2,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/copy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/crush,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/density,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fari,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/fastlz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/gipfeli,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/heatshrink,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/libdeflate,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lz4,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzf,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzg,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzham,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzjb,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzma,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/lzo,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/miniz,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ms-compress",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/ncompress,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/quicklz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/snappy,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/wflz,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/yalz77,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib,
+					"../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zlib-ng",
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zling,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zpaq,
+					../../../addons/ofxSquash/libs/squash/bin/osx/x64/squash/zstd,
+					../../../addons/ofxSquash/libs/squash/include,
+					../../../addons/ofxSquash/libs/squash/include/squash,
+					../../../addons/ofxSquash/libs/squash/lib,
+					../../../addons/ofxSquash/libs/squash/lib/osx,
+					../../../addons/ofxSquash/libs/squash/lib/osx/x64,
+					../../../addons/ofxSquash/src,
+					../../../addons/ofxSquash/src/ofxSquash,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					"\"$(SRCROOT)/../libs/squash/lib/osx/x64/libsquash0.8.a\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "exampleStreamSimple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "exampleStreamSimple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}

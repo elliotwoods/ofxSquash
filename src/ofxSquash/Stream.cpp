@@ -20,10 +20,7 @@ namespace ofxSquash {
 
 	//----------
 	Stream::~Stream() {
-		if (this->squashStream) {
-			squash_object_unref(this->squashStream);
-		}
-		this->squashStream = NULL;
+		this->clear();
 	}
 
 	//----------
@@ -38,13 +35,14 @@ namespace ofxSquash {
 
 	//----------
 	void Stream::read(const void * dataRaw, size_t size) {
+		auto squashDirection = this->direction == Direction::Compress ? SQUASH_STREAM_COMPRESS : SQUASH_STREAM_DECOMPRESS;
+
 		if (!this->squashStream) {
 			if (!this->codec.isValid()) {
 				OFXSQUASH_ERROR << "Cannot read stream. Codec is not initialized";
 				return;
 			}
 
-			auto squashDirection = direction == Direction::Compress ? SQUASH_STREAM_COMPRESS : SQUASH_STREAM_DECOMPRESS;
 
 			this->squashStream = squash_stream_new(this->codec.getSquashCodec(), squashDirection, nullptr);
 			if (!squashStream) {
@@ -85,6 +83,15 @@ namespace ofxSquash {
 				}
 			}
 		} while (status == SQUASH_PROCESSING);
+	}
+
+	//----------
+	void Stream::clear() {
+		if (this->squashStream) {
+			squash_stream_destroy(this->squashStream);
+			squash_object_unref(this->squashStream);
+			this->squashStream = nullptr;
+		}
 	}
 
 	//----------
@@ -132,6 +139,7 @@ namespace ofxSquash {
 			this->writeFunction(args);
 		}
 
+		squash_stream_destroy(this->squashStream);
 		squash_object_unref(this->squashStream);
 		this->squashStream = nullptr;
 

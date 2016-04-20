@@ -24,6 +24,8 @@ namespace ofxSquash {
 
 		void read(const void * data, size_t size);
 
+		void clear();
+
 		Stream & operator<<(const string &);
 		Stream & operator<<(const Finish &);
 	protected:
