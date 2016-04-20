@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B3CB047CEDC2DB624B4D2F986F9A3EDD25B4B526",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B3CB047CEDC2DB624B4D2F986F9A3EDD25B4B526" : 0,
+    "B6C102FCF330C19C9E5738E75676D307C11A62C5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A23C7CB5-71AA-466D-84A8-4A7A77143C07",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B3CB047CEDC2DB624B4D2F986F9A3EDD25B4B526" : "ofxSquash\/",
+    "B6C102FCF330C19C9E5738E75676D307C11A62C5" : "ofxProfiler\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "exampleStreamSimple",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "exampleStreamSimple\/exampleStreamSimple.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:elliotwoods\/ofxSquash.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3CB047CEDC2DB624B4D2F986F9A3EDD25B4B526"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:elliotwoods\/ofxProfiler.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B6C102FCF330C19C9E5738E75676D307C11A62C5"
+    }
+  ]
+}

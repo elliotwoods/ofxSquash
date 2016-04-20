@@ -2,6 +2,7 @@
 
 #include "ofxSquash/Codec.h"
 #include "ofxSquash/Stream.h"
+#include "ofxSquash/Initializer.h"
 
 #include <vector>
 

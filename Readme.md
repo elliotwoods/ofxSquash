@@ -151,6 +151,17 @@ compressStream << ofxSquash::Stream::Finish();
 
 // The stream is now closed. It will reopen if you stream any more data into it
 ```
+
+Troubleshooting
+---------------
+
+### ofxSquash doesn't find any plugins
+
+Try:
+
+* Make sure you have a `data/` folder which can be found by `ofToDataPath` (we use this function when navigating to the `plugins` folder, so the `bin/data` path must exist even if it is empty).
+* Make sure that the plugins are copied so that the directory structure is `bin/plugins/squash/[codec name]/`.
+
 Compatability
 =============
 
