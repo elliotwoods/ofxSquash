@@ -10,11 +10,11 @@ namespace ofxSquash {
 		if (!initialized) {
 			string pluginDir = getPluginDir();
 			
+			pluginDir = ofToDataPath(pluginDir,true);
+
 			if (!ofDirectory(pluginDir).exists()) {
 				pluginDir = getPluginOriginDir();
 			}
-			
-			pluginDir = ofToDataPath(pluginDir);
 			
 			ofStringReplace(pluginDir, "\\", "/");
 			squash_set_default_search_path(pluginDir.c_str());
