@@ -5,10 +5,11 @@
 #include "ofxSquash/Initializer.h"
 
 #include <vector>
+#include <map>
 
 using namespace std;
 
 namespace ofxSquash {
-	typedef map<string, Codec> CodecList;
-	map<string, Codec> getCodecList(bool returnOnlyValid = true);
+	typedef std::map<std::string, Codec> CodecList;
+	std::map<std::string, Codec> getCodecList(bool returnOnlyValid = true);
 }
