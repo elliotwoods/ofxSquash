@@ -11,5 +11,5 @@ using namespace std;
 
 namespace ofxSquash {
 	typedef std::map<std::string, Codec> CodecList;
-	std::map<std::string, Codec> getCodecList(bool returnOnlyValid = true);
+	map<std::string, Codec> getCodecList(bool returnOnlyValid = true);
 }
