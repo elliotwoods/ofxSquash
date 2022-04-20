@@ -5,6 +5,7 @@
 #include "ofxSquash/Initializer.h"
 
 #include <vector>
+#include <map>
 
 using namespace std;
 

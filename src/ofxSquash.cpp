@@ -5,6 +5,8 @@
 #include "ofMain.h"
 #include <squash/squash.h>
 
+using namespace std;
+
 //----------
 void populateCodecListCallback(SquashCodec * squashCodec, void * data) {
 	auto codecList = static_cast<ofxSquash::CodecList *>(data);
